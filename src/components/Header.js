@@ -1,4 +1,4 @@
-import { login, logout} from '../../services/firebase';
+import { login, logout} from '../services/firebase';
 
 
 import styles from './Header.module.css';

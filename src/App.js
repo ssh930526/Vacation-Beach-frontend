@@ -56,7 +56,7 @@ export default function App() {
           editMode: false,
           newBeach: {
             Beach: '', 
-            rating:'5'
+            rating:'10'
             
           }
         });
@@ -74,7 +74,7 @@ export default function App() {
           beaches: [...state.beaches, beach],
           newBeach: {
             beach: "",
-            rating:"5"
+            rating:"10"
   
           }
         });
@@ -140,11 +140,11 @@ export default function App() {
       <form onSubmit={handleSubmit}>
         <label>
           <span>BEACH</span>
-          <input name="beach" value={state.newBeach.beach} onChange={handleChange}/>
+          <input name="beachName" value={state.beaches.beach} onChange={handleChange}/>
         </label>
         <label> 
           <span>Rating</span>
-          <select name="rating" value={state.newBeach.rating} onChange={handleChange}>
+          <select name="rating" value={state.beaches.rating} onChange={handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
