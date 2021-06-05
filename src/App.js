@@ -7,15 +7,22 @@ import {
   deleteBeach } from "./services/beach-service";
   
 import Header from './components/Header';
+
+// import Whitsunday from './components/Whitsunday';
   
 import "./App.css";
 
+
 export default function App() {
+
   const [state, setState] = useState({
-    beaches: [{ beach: "name" }],
-    beachLocated: {
+    beaches: [{ beach: " " }],
+    newBeach: {
       beach: "",
-      rating:"5"
+      beachLocated:"",
+      rating:"10",
+      sandColor:""
+      
     }, 
     editMode: false
   });
@@ -33,6 +40,8 @@ export default function App() {
         ...prevState,
         beaches
       }));
+
+     
     }
     getAppData();
     // Set up authentication observer
@@ -45,6 +54,8 @@ export default function App() {
     }
   }, []);
 
+
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -55,8 +66,10 @@ export default function App() {
           beaches,
           editMode: false,
           newBeach: {
-            Beach: '', 
-            rating:'10'
+            beach: "",
+            beachLocated:"",
+            rating:"10",
+            sandColor:""
             
           }
         });
@@ -74,7 +87,9 @@ export default function App() {
           beaches: [...state.beaches, beach],
           newBeach: {
             beach: "",
-            rating:"10"
+            beachLocated:"",
+            rating:"10",
+            sandColor:""
   
           }
         });
@@ -83,6 +98,7 @@ export default function App() {
         
         console.log(error);
       }
+
     }
   }
 
@@ -117,14 +133,52 @@ export default function App() {
       console.log(error)
     }
   }
+  
 
   return (
     <>
     <Header user={userState.user} />
+
     <section>
       {state.beaches.map((s, i) => (
         <article key={i}>
           <div>{s.beach}</div> 
+          <div>
+          <a className="name" href="/beaches/fiji" >Fiji</a>
+  <img className="img1" src="https://foundtheworld.com/wp-content/uploads/2014/12/Fiji.jpg" />
+
+   <a className="name" href="/beaches/bora">Bora Bora</a>
+  <img  className="img2" src="https://dbijapkm3o6fj.cloudfront.net/resources/1890,1004,1,6,4,0,960,540/-4153-/20201007143455/stay-3-nights-save-30-with-breakfast-dinner-le-bora-bora-by-pearl-resorts.jpeg"/>
+  
+  <a className="name" href="/beaches/maldives">Maldives</a>
+  <img className="img3" src="https://cdnprs.wisconsin.dev/wp-content/uploads/2021/05/mercuremaldiveskoodooresortmaldivesexterior.jpeg"/>
+  
+    <a className="name" href="/beaches/tahiti"> Tahiti </a>
+  <img className="img4" src="https://www.travelagewest.com/uploadedImages/All_Gateways/ASPAC/Australia_-_South_Pacific/TahitiOntheGroun_HERO.jpg?width=1008&height=567&scale=both&mode=crop" /> 
+  
+  <a className="name" href="/beaches/maui">Maui</a>
+  <img className="img5" src="https://static-ssl.businessinsider.com/image/571a57cf910584cc5e8be51b-1465-1099/01_maui_hawaii_01.jp2" /> 
+  
+  <a className="name" href="/beaches/whitsunday">Whitsunday Islands</a>
+  <img className="img6" src="https://www.planetware.com/photos-large/AUS/australia-queensland-whitsunday-islands-whitehaven-beach.jpg" />
+  
+  <a className="name" href="/beaches/mauritius">Mauritius</a>
+  <img className="img7" src="https://img.traveltriangle.com/blog/wp-content/uploads/2020/02/Places-To-Visit-In-Mauritius_27th-Feb.jpg" />
+  
+  <a className="name" href="/beaches/lucia">St. Lucia</a>
+  <img className="img8"  src="http://www.jaxfaxmagazine.com/wp-content/uploads/2020/09/Caibbean-saint-lucia-jade-mountain-resort.jpg" />
+  
+  <a className="name" href="/beaches/cancun">Cancun</a>
+  <img className="img9" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/331000/331437-Quintana-Roo.jpg" />
+
+  
+  <a className="name" href="beaches/railay">Railay Beach</a>
+  <img className="img10" src="http://static.asiawebdirect.com/m/phuket/portals/krabi-hotels-com/shared/teasersL/top10-railay/teaserMultiLarge/imageHilight/best-of-railay-LT.jpg" />
+  
+  </div>
+  
+
+        
           
           <div 
             className="controls"
@@ -141,6 +195,14 @@ export default function App() {
         <label>
           <span>BEACH</span>
           <input name="beachName" value={state.beaches.beach} onChange={handleChange}/>
+        </label>
+        <label>
+          <span>Beach Located</span>
+          <input name="beachLocated" value={state.beaches.beachLocated} onChange={handleChange}/>
+        </label>
+        <label>
+          <span>Sand Color</span>
+          <input name="sandColor" value={state.beaches.sandColor} onChange={handleChange}/>
         </label>
         <label> 
           <span>Rating</span>
@@ -160,8 +222,17 @@ export default function App() {
         </label>
         <button>{state.editMode ? 'EDIT BEACH' : 'ADD BEACH'}</button>
       </form>
+  
+
     </section>
-    </>
+
+  
+  
+  <footer>
+  <p>All Rights Reserved Copyright &copy; Beach 2021</p>
+</footer>
+  </>
   );
 }
+
 

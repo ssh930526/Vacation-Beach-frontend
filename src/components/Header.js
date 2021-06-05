@@ -7,13 +7,13 @@ import styles from './Header.module.css';
 function Header(props) {
     return (
         <header className={styles.header}>
-            <h1>{'⚛︎'} React Beaches</h1>
+            <h1>{'🏖🏖'} Top 10 Beaches {'🏖🏖'}</h1>
             <nav>
                 <ul>
                     {
                         props.user ?
                     <>
-                    <li>Welcome, {props.user.displayName}</li>
+                    
                     <li>
                         <img 
                         style={{height: '2.8rem', borderRadius: '50%'}}
@@ -40,6 +40,8 @@ function Header(props) {
                 </ul>
             </nav>
         </header>
+
+
     );
 }
  

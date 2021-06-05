@@ -1,39 +1,151 @@
-.App {
-  text-align: center;
+
+*{
+  box-sizing: border-box;
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  height: 50px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.edit {
+  padding-top: 35rem;
+}
+.details {
+  padding-top: 25rem;
+}
+
+h1 {
+  font-size: 70PX;
+  color: rgb(80, 148, 148);
+  justify-content: center;
+  display: flex;
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.img1 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+
+.img2 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img3 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img4 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img5 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img1 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img6 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img7 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img8 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img9 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
+}
+.img10 {
+  height: 30rem;
+  width: 50rem;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20%;
+  border-style: none;
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); 
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name {
+  color:rgb(108, 111, 138);
+  font-size: 20px;
+  padding-left: 30px;
+  font-family: fantasy;
+  font-style: italic;
+  font-weight: bold;
+  
+}
+
+.new {
+  color: cornflowerblue;
+  font-family: monospace;
+  padding-left: 100px;
+}
+
+.all {
+  color: cornflowerblue;
+  font-family: monospace;
+  padding-left: 90px;
 }
