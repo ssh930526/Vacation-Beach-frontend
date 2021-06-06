@@ -57,12 +57,10 @@ export default function App() {
      
     }
     getAppData();
-    // Set up authentication observer
     const unsubscribe = auth.onAuthStateChanged(user => setUserState({ user }));
 
     // clean up function
     return function() {
-      // clean up subscriptions
       unsubscribe();
     }
   }, []);
@@ -258,16 +256,15 @@ export default function App() {
   </div>
   
 
-        
-          
+      
           <div 
             className="controls"
             onClick={() => handleEdit(s._id)}
-          >{'✏️'}</div>
+          >{'✏︎'}</div>
           <div 
             className="controls"
             onClick={() => handleDelete(s._id)}
-          >{'🗑'}</div>
+          >{'✘'}</div>
         </article>
       ))}
       <hr />
