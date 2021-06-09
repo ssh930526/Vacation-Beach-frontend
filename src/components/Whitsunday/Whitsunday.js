@@ -1,13 +1,13 @@
+import { Link }from 'react-router-dom';
 import styles from './Whitsunday.module.css';
-import { Link } from 'react-router-dom';
+const Whitsunday = () =>  {
 
-const Whitsunday = props => {
-    return(
-   <div className={styles.Whitsunday}>
-      <Link to='/'>All Beaches</Link>
-      <h1>Whitsunday Beach</h1>
-    </div>
-);
-    }
+    return (
+        <div className={styles.Whitsunday}>
+           <h1>Whitsunday</h1>
+           <Link to='/beaches'> </Link>
+        </div>
+    
+)};
 
-    export default Whitsunday;
+export default Whitsunday;

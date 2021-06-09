@@ -6,7 +6,7 @@ const Bora = () =>  {
 
     return (
         <div className={styles.Bora} >
-           
+           <h1>Bora</h1>
            <Link to='/beaches'> </Link>
         </div>
     

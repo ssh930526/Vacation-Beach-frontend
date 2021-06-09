@@ -8,9 +8,8 @@ import {
   
 import Header from './components/Header';
 
-  
+import { Route, Switch, Link} from 'react-router-dom';
 import "./App.css";
-import { Route, Router, Switch } from "react-router-dom";
 import ViewPage from "./pages/ViewPage/ViewPage";
 import BeachPage from "./pages/BeachPage/BeachPage";
 import AddPage from "./pages/AddPage/AddPage";
@@ -155,7 +154,7 @@ export default function App() {
         <article key={i}>
           <div>{s.beach}</div> 
           <div>
-          <a className="name" href="/beaches/fiji" >Fiji</a>
+          <Link to='/beaches/fiji'> Fiji</Link>
   <img className="img1" alt="pciture" src="https://foundtheworld.com/wp-content/uploads/2014/12/Fiji.jpg" />
 
    <a className="name"  href="/beaches/bora">Bora Bora</a>
@@ -185,9 +184,9 @@ export default function App() {
   
   <a className="name" href="beaches/railay">Railay Beach</a>
   <img className="img10" alt="pciture"  src="http://static.asiawebdirect.com/m/phuket/portals/krabi-hotels-com/shared/teasersL/top10-railay/teaserMultiLarge/imageHilight/best-of-railay-LT.jpg" />
- <Router>
+ 
   <Switch>
-    <Route path='/'
+    <Route exact path='/'
     render={()=> (
       <BeachPage />
     )} />
@@ -215,7 +214,7 @@ export default function App() {
       <Maldives />
     )}
       />
-    <Route path='beaches/maui'
+    <Route path='/beaches/maui'
     render={() => (
       <Maui />
     )}
@@ -229,17 +228,17 @@ export default function App() {
       <Railay />
     )}
     />
-    <Route path='beaches/tahiti'
+    <Route path='/beaches/tahiti'
     render={() => (
       <Tahiti />
     )}
     />
-    <Route path='beaches/whitsunday'
+    <Route path='/beaches/whitsunday'
     render={() =>(
       <Whitsunday />
     )}
     />
-    <Route path='beaches/add'
+    <Route path='/beaches/add'
     render={()=> (
       <AddPage />
     )}
@@ -252,7 +251,7 @@ export default function App() {
      
 
   </Switch>
-  </Router>
+ 
   </div>
   
 
