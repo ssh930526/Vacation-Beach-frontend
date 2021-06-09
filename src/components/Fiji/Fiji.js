@@ -7,6 +7,9 @@ const Fiji = () =>  {
        
            <h1>Fiji</h1>
            <Link to='/beaches'> </Link>
+           <img className="img1" 
+                alt="pciture" 
+                src="https://foundtheworld.com/wp-content/uploads/2014/12/Fiji.jpg" />
         </div>
     
 )};

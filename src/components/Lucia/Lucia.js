@@ -6,6 +6,9 @@ const Lucia = () =>  {
         <div className={styles.Lucia} >
            <h1>Lucia</h1>
            <Link to='/beaches'> </Link>
+           <img className="img8" 
+                alt="pciture" 
+                src="http://www.jaxfaxmagazine.com/wp-content/uploads/2020/09/Caibbean-saint-lucia-jade-mountain-resort.jpg" />
         </div>
     
 )};
