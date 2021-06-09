@@ -9,7 +9,7 @@ import Railay from '../../components/Railay /Railay';
 import Tahiti from '../../components/Tahiti/Tahiti';
 import Whitsunday from '../../components/Whitsunday/Whitsunday';
 import React from 'react';
-
+// import { Link }from 'react-router-dom';
 
 
 
@@ -21,7 +21,7 @@ const BeachPage = () => {
     return (
         <div className='App'>
             
-            
+             
             <Bora />
             <Cancun />
             <Fiji />
@@ -31,7 +31,9 @@ const BeachPage = () => {
             <Mauritius />
             <Railay />
             <Tahiti />
-            <Whitsunday />
+            <Whitsunday /> 
+
+
            
         </div>
      

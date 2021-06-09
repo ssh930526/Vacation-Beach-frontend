@@ -185,6 +185,7 @@ export default function App() {
   <a className="name" href="beaches/railay">Railay Beach</a>
   <img className="img10" alt="pciture"  src="http://static.asiawebdirect.com/m/phuket/portals/krabi-hotels-com/shared/teasersL/top10-railay/teaserMultiLarge/imageHilight/best-of-railay-LT.jpg" />
  
+
   <Switch>
     <Route exact path='/'
     render={()=> (
@@ -303,7 +304,7 @@ export default function App() {
  
           </select>
         </label>
-        <button>{state.editMode ? 'EDIT BEACH' : 'ADD BEACH'}</button>
+        <button>{ state.editMode ? 'EDIT BEACH' : 'ADD BEACH' }</button>
       </form>
   
 
