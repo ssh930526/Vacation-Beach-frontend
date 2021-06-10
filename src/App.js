@@ -12,7 +12,7 @@ import { Route, Switch, Link} from 'react-router-dom';
 import "./App.css";
 import ViewPage from "./pages/ViewPage/ViewPage";
 import BeachPage from "./pages/BeachPage/BeachPage";
-import AddPage from "./pages/AddPage/AddPage";
+import BookPage from "./pages/BookPage/BookPage";
 import Bora from './components/Bora/Bora';
 import Cancun from './components/Cancun/Cancun';
 import Fiji from './components/Fiji/Fiji';
@@ -73,19 +73,22 @@ export default function App() {
       try {
         const beaches = await updateBeach(state.newBeach);
         setState({
-          beaches,
-          editMode: false,
-          newBeach: {
-            beach: "",
-            beachLocated:"",
-            rating:"10",
-            sandColor:""
-            
-          }
+          
+          beaches: [{ beach: " " }],
+        newBeach: {
+        beach: "",
+        beachLocated:"",
+        rating:"10",
+        sandColor:""
+      
+    }, 
+    
+    editMode: false
+         
         });
         
       } catch (error) {
-        
+        console.log(error)
       }
 
     } else {
@@ -177,7 +180,7 @@ export default function App() {
           
           <Link className="view" to="/beaches/view">View All Beach</Link >
  
-          <Link className="add" to="/beaches/add"> Add All Beach</Link >
+          <Link className="add" to="/beaches/book"> Book My Beach</Link >
 
   <Switch>
     <Route exact path='/'
@@ -232,9 +235,9 @@ export default function App() {
       <Whitsunday />
     )}
     />
-    <Route path='/beaches/add'
+    <Route path='/beaches/book'
     render={()=> (
-      <AddPage />
+      <BookPage />
     )}
     />
     <Route path='/beaches/view'
@@ -262,15 +265,15 @@ export default function App() {
       ))}
       <hr />
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="labels">
           <span>BEACH</span>
           <input name="beachName" value={state.beaches.beach} onChange={handleChange}/>
         </label>
-        <label>
+        <label className="labels">
           <span>Beach Located</span>
           <input name="beachLocated" value={state.beaches.beachLocated} onChange={handleChange}/>
         </label>
-        <label>
+        <label className="labels">
           <span>Sand Color</span>
           <select name="sandColor" value={state.beaches.sandColor} onChange={handleChange}>
             <option value="Pink">Pink</option>
@@ -281,7 +284,7 @@ export default function App() {
             </select>
            
         </label>
-        <label> 
+        <label className="labels"> 
           <span>Rating</span>
           <select name="rating" value={state.beaches.rating} onChange={handleChange}>
             <option value="1">1</option>
@@ -297,7 +300,7 @@ export default function App() {
  
           </select>
         </label>
-        <button>{ state.editMode ? 'EDIT BEACH' : 'ADD BEACH' }</button>
+        <button className="labels">{ state.editMode ? 'EDIT BEACH' : 'ADD BEACH' }</button>
       </form>
   
 
@@ -311,5 +314,3 @@ export default function App() {
   </>
   );
 }
-
-
