@@ -145,6 +145,7 @@ export default function App() {
   }
   
 
+
   return (
     <>
     <Header user={userState.user} />
@@ -153,29 +154,30 @@ export default function App() {
       {state.beaches.map((s, i) => (
         <article key={i}>
           <div>{s.beach}</div> 
-          <div>
-          <Link to='/beaches/fiji'> Fiji</Link>
+          <div >
+          <Link className="name" to='/beaches/fiji'> Fiji</Link>
 
-          <Link to="/beaches/bora">Bora Bora</Link>
+          <Link className="name" to="/beaches/bora">Bora Bora</Link>
           
-          <Link to="/beaches/maldives">Maldives</Link>
+          <Link className="name" to="/beaches/maldives">Maldives</Link>
                    
-          <Link to="/beaches/tahiti"> Tahiti </Link>
+          <Link className="name" to="/beaches/tahiti"> Tahiti </Link>
                    
-          <Link to="/beaches/maui">Maui</Link>
+          <Link className="name" to="/beaches/maui">Maui</Link>
           
-          <Link to="/beaches/whitsunday">Whitsunday Islands</Link>
+          <Link className="name1" to="/beaches/whitsunday">Whitsunday Islands</Link>
                     
-          <Link to="/beaches/mauritius">Mauritius</Link>
+          <Link className="name1" to="/beaches/mauritius">Mauritius</Link>
           
-          <Link to="/beaches/lucia">St. Lucia</Link>
+          <Link className="name1" to="/beaches/lucia">St. Lucia</Link>
                    
-          <Link to="/beaches/cancun">Cancun</Link>
+          <Link className="name1" to="/beaches/cancun">Cancun</Link>
           
-          <Link to="/beaches/railay">Railay Beach</Link >
+          <Link className="name1" to="/beaches/railay">Railay Beach</Link >
           
-          <Link to="/beaches/view">View All Beaches</Link >
+          <Link className="view" to="/beaches/view">View All Beach</Link >
  
+          <Link className="add" to="/beaches/add"> Add All Beach</Link >
 
   <Switch>
     <Route exact path='/'
@@ -201,7 +203,7 @@ export default function App() {
       <Lucia />
     )}
     />
-    <Route path='/beaches/maldive'
+    <Route path='/beaches/maldives'
     render={()=> (
       <Maldives />
     )}

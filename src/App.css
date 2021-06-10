@@ -26,126 +26,44 @@ h1 {
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
-.img1 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-
-.img2 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img3 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img4 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img5 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img1 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img6 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img7 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img8 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img9 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
-.img10 {
-  height: 30rem;
-  width: 50rem;
-  padding-left: 3rem;
-  display: flex;
-  justify-content: center;
-  border-radius: 20%;
-  border-style: none;
-}
 
 
 .name {
-  color:rgb(108, 111, 138);
-  font-size: 20px;
-  padding-left: 30px;
+  color:rgb(205, 208, 231);
+  font-size: 25px;
+  padding-left: 35px;
   font-family: fantasy;
   font-style: italic;
   font-weight: bold;
+  padding-inline-start: 15rem;
+  display: flex;
   
 }
 
-.new {
-  color: cornflowerblue;
-  font-family: monospace;
-  padding-left: 100px;
+.name1{  
+  display: flex;
+  color:rgb(205, 208, 231);
+  font-size: 25px;
+  /* padding-left: 50px; */
+  font-family: fantasy;
+  font-style: italic;
+  font-weight: bold;
+  padding-inline-start: 25rem;
+  position: relative;
+  /* top: 200px !important; */
 }
 
-.all {
+
+
+.view {
   color: cornflowerblue;
   font-family: monospace;
-  padding-left: 90px;
+  padding-left: 45rem;
+}
+
+.add {
+  color: cornflowerblue;
+  font-family: monospace;
+  padding-left: 50rem;
+
 }
