@@ -29,7 +29,7 @@ export default function App() {
 
   const [state, setState] = useState({
     beaches: [{ beach: " " }],
-    newBeach: {
+      newBeach: {
       beach: "",
       beachLocated:"",
       rating:"10",
@@ -73,22 +73,21 @@ export default function App() {
       try {
         const beaches = await updateBeach(state.newBeach);
         setState({
-          
-          beaches: [{ beach: " " }],
-        newBeach: {
-        beach: "",
-        beachLocated:"",
-        rating:"10",
-        sandColor:""
+          beaches,
+          editMode: false,
+        
+          newBeach: {
+          beach: "",
+          beachLocated:"",
+          rating:"10",
+          sandColor:""
       
     }, 
-    
-    editMode: false
          
         });
         
       } catch (error) {
-        console.log(error)
+        
       }
 
     } else {
@@ -154,9 +153,9 @@ export default function App() {
     <Header user={userState.user} />
 
     <section>
-      {state.beaches.map((s, i) => (
+      {/* {state.beaches.map((s, i) => (
         <article key={i}>
-          <div>{s.beach}</div> 
+          <div>{s.beach}</div>  */}
           <div >
           <Link className="name" to='/beaches/fiji'> Fiji</Link>
 
@@ -181,8 +180,10 @@ export default function App() {
           <Link className="view" to="/beaches/view">View All Beach</Link >
  
           <Link className="add" to="/beaches/book"> Book My Beach</Link >
-
   <Switch>
+  {/* </div> */}
+   
+
     <Route exact path='/'
     render={()=> (
       <BeachPage />
@@ -250,10 +251,15 @@ export default function App() {
   </Switch>
  
   </div>
-  
-
-      
-          <div 
+  {state.beaches.map((s, i) => (
+     <article key={i}>
+       <div>
+         Beach: {s.beachName}
+         Beach Located: {s.beachLocated}
+         Sand Color: {s.sandColor}
+         Rating: {s.rating}
+       </div>
+       <div 
             className="controls"
             onClick={() => handleEdit(s._id)}
           >{'✏︎'}</div>
@@ -261,8 +267,18 @@ export default function App() {
             className="controls"
             onClick={() => handleDelete(s._id)}
           >{'✘'}</div>
+
+      
+           {/* <div 
+            className="controls"
+            onClick={() => handleEdit(s._id)}
+          >{'✏︎'}</div> */}
+          {/* <div 
+         className="controls"
+            onClick={() => handleDelete(s._id)}
+         >{'✘'}</div> */}
         </article>
-      ))}
+       ))} 
       <hr />
       <form onSubmit={handleSubmit}>
         <label className="labels">
