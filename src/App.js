@@ -30,7 +30,7 @@ export default function App() {
   const [state, setState] = useState({
     beaches: [{ beach: " " }],
       newBeach: {
-      beach: "",
+      beachName: "",
       beachLocated:"",
       rating:"10",
       sandColor:""
@@ -38,6 +38,7 @@ export default function App() {
     }, 
     editMode: false
   });
+ 
 
   const [ userState, setUserState ] = useState({
     user: null
@@ -77,7 +78,7 @@ export default function App() {
           editMode: false,
         
           newBeach: {
-          beach: "",
+          beachName: "",
           beachLocated:"",
           rating:"10",
           sandColor:""
@@ -98,7 +99,7 @@ export default function App() {
         setState({
           beaches: [...state.beaches, beach],
           newBeach: {
-            beach: "",
+            beachName: "",
             beachLocated:"",
             rating:"10",
             sandColor:""
@@ -252,21 +253,24 @@ export default function App() {
  
   </div>
   {state.beaches.map((s, i) => (
+    
+
      <article key={i}>
-       <div>
-         Beach: {s.beachName}
-         Beach Located: {s.beachLocated}
-         Sand Color: {s.sandColor}
-         Rating: {s.rating}
+       <div className="tags" >
+         <div classname="nameTag">Beach: {s.beachName}</div>
+         <div className="locatedTag">Beach Located: {s.beachLocated}</div>
+         <div className="colorTag">Sand Color: {s.sandColor}</div>
+         <div className="ratingTag"> Rating: {s.rating} </div>
+         
        </div>
        <div 
             className="controls"
             onClick={() => handleEdit(s._id)}
-          >{'✏︎'}</div>
+          ><div className="editTag">{'✏︎'}</div></div>
           <div 
             className="controls"
             onClick={() => handleDelete(s._id)}
-          >{'✘'}</div>
+          ><div className="deleteTag">{'✘'}</div></div>
 
       
            {/* <div 
@@ -279,6 +283,8 @@ export default function App() {
          >{'✘'}</div> */}
         </article>
        ))} 
+
+       
       <hr />
       <form onSubmit={handleSubmit}>
         <label className="labels">

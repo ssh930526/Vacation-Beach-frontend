@@ -71,9 +71,20 @@ h1 {
 
 .controls {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding-left: 35rem;
-  margin-top: 5rem;
+ 
+  
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 35rem;
+
+  
 }
 
 .labels {
@@ -84,3 +95,22 @@ h1 {
   font-weight: bold;
   
 }
+
+.tags {
+  
+  color:rgb(124, 164, 238);
+  font-family:'Franklin Gothic Medium';
+  font-display:initial;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+  
+}
+.locatedTag {
+  color: rgb(71, 129, 179);
+}
+
+.ratingTag {
+  color: rgb(71, 129, 179);
+}
+
