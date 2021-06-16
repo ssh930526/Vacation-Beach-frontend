@@ -14,7 +14,7 @@ const BookPage = () =>  {
                <img className="icons" 
                 // alt="picture" 
                     alt=""
-                    src="https://lh3.googleusercontent.com/proxy/YamRaLG-5d4JBU3kWrBsj6UDzF8j5s-zJsWKJze4e0uAd1NX93iojjK9m3mrzkXsv9vXTO6h4QyldmuT38bucKNmV-uCbnYT4vmoahKVT0GF9KeUda2m4zIaQHo" 
+                    src="https://alternative.me/media/256/expedia-icon-xdmajml2g9dcg4e5-c.png" 
                 />
            
            
